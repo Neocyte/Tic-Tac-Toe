@@ -44,6 +44,11 @@ html {
     border: 5px solid rgb(235, 238, 236);
 }
 
+.deck li:hover {
+    cursor: pointer;
+    background-color: rgb(235, 238, 236);
+}
+
 i {
     color: rgb(235, 238, 236);
 }

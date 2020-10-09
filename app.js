@@ -50,6 +50,11 @@ function checkWin() {
         (array[6].className === "X" && array[7].className === "X" && array[8].className === "X")) {
         reset('win');
     }
+    if ((array[0].className === "O" && array[1].className === "O" && array[2].className === "O") ||
+        (array[3].className === "O" && array[4].className === "O" && array[5].className === "O") ||
+        (array[6].className === "O" && array[7].className === "O" && array[8].className === "O")) {
+        reset('lose');
+    }
 
     // columns
      else if ((array[0].className === "X" && array[3].className === "X" && array[6].className === "X") ||
@@ -57,14 +62,23 @@ function checkWin() {
         (array[2].className === "X" && array[5].className === "X" && array[8].className === "X")) {
         reset('win');
     }
+     else if ((array[0].className === "O" && array[3].className === "O" && array[6].className === "O") ||
+        (array[1].className === "O" && array[4].className === "O" && array[7].className === "O") ||
+        (array[2].className === "O" && array[5].className === "O" && array[8].className === "O")) {
+        reset('lose');
+    }
 
     // diagonals
     else if ((array[0].className === "X" && array[4].className === "X" && array[8].className === "X") ||
         (array[2].className === "X" && array[4].className === "X" && array[6].className === "X")) {
         reset('win');
     }
+    else if ((array[0].className === "O" && array[4].className === "O" && array[8].className === "O") ||
+        (array[2].className === "O" && array[4].className === "O" && array[6].className === "O")) {
+        reset('lose');
+    }
 
-    // lose
+    // moves
     else if (moves === 5) {
         reset('lose');
     }
